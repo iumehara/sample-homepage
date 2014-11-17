@@ -1,0 +1,44 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <a ng-click="navHome()" class="brand">My blog</a>
+    <ul class="nav pull-right">
+      <li>
+        <a ng-click="navNewPost()">New Post</a>
+      </li>
+      <li>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+          Contact
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div ng-controller="FeedbackCreateCtrl" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
+      </div>
+      <div class="modal-body">
+			  <form>
+			    <fieldset>
+			      <label><strong>Name</strong></label>
+			      <input class="span12" ng-model="feedbackParams.feedbackName" placeholder="New Post" type="text" maxlength="250">
+			      <label><strong>Email</strong></label>
+			      <input class="span12" ng-model="feedbackParams.feedbackEmail" placeholder="New Post" type="text" maxlength="250">
+			      <label><strong>Subject</strong></label>
+			      <input class="span12" ng-model="feedbackParams.feedbackSubject" placeholder="New Post" type="text" maxlength="250">
+			      <label><strong>Content</strong></label>
+			      <textarea class="span12" style="height: 250px" ng-model="feedbackParams.feedbackContent" placeholder="Type your post here..."></textarea>
+			    </fieldset>
+			  </form>
+      </div>
+      <div class="modal-footer">
+      <button class="btn btn-primary" ng-click="createFeedback()">Create</button>
+      <button class="btn btn-danger pull-right" ng-click="clearFeedback()">Clear post</button>
+      </div>
+    </div>
+  </div>
+</div>

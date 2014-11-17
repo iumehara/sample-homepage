@@ -1,63 +1,45 @@
-var postServices = angular.module('postServices', []);
+var feedbackServices = angular.module('feedbackServices', []);
 
-postServices.factory('postData', ['$http',
+feedbackServices.factory('feedbackData', ['$http',
 	function($http) {
-		postData = {
-			data: {
-				posts: [{title: 'Loading', contents: ''}]
-			},
-			isLoaded: false
-		};
-
-		postData.loadPosts = function(deferred) {
-			if (!postData.isLoaded) {
-				$http.get('./posts.json').
-					success(function(data) {
-						postData.data.posts = data;
-						postData.isLoaded = true;
-						console.log('successfull loaded posts.');
-						if (deferred) {
-							deferred.resolve();
-						}
-					}).
-					error(function() {
-						console.error('Failed to load posts.');
-						if (deferred) {
-							deferred.reject('Failed to load posts');
-						}
-					});
-			} else {
-				if (deferred) {
-					deferred.resolve();
+		feedbackData = {
+			data:  {
+				feedback: {
+					subject: '',
+					name: '',
+					email: '',
+					content: ''
 				}
 			}
-		};
+		}
 
-		postData.createPost = function(newPost) {
-			if (newPost.newPostTitle == '' || newPost.newPostContents == '') {
+		feedbackData.createFeedback = function(feedbackParams) {
+			if (feedbackParams.feedbackEmail == '' ||  feedbackParams.feedbackContent == '') {
 				alert('Neither the Title nor the Body are allowed to be left blank.');
 				return false;
 			}
 
 			data = {
-				post: {
-					title: newPost.newPostTitle,
-					contents: newPost.newPostContents
+				feedback: {
+					subject: feedbackParams.feedbackSubject,
+					name: feedbackParams.feedbackName,
+					email: feedbackParams.feedbackEmail,
+					content: feedbackParams.feedbackContent
 				}
 			}
 
-			$http.post('/posts.json', data).
+			$http.post('/feedbacks.json', data).
 				success(function(data) {
-					postData.data.posts.push(data);
-					console.log('Successfully created post.');
+					console.log(data);
+					console.log('Successfully created feedback.');
 				}).error(function() {
-					console.log('Failed to create new post.')
+					console.log('Failed to create new feedback.')
 				});
 
 			return true;
 		};
 
-		return postData;
+		return feedbackData;
 	}
 ]);
 

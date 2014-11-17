@@ -2,6 +2,9 @@ var postsControllers = angular.module('postsControllers', ['postServices']);
 
 postsControllers.controller('PostIndexCtrl', ['$scope', '$location', '$http', 'postData',
 	function($scope, $location, $http) {
+		$scope.navbarPartial = {
+			url: '../assets/_navbar.html'
+		};
 
 		$scope.data = postData.data;
 

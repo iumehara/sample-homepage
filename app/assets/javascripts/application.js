@@ -17,7 +17,9 @@
 //= require angular
 //= require angular-route
 //= require controllers/app
+//= require controllers/feedbacks
 //= require controllers/posts
 //= require controllers/projects
+//= require services/feedbacks
 //= require services/posts
 //= require services/projects

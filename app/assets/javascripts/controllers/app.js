@@ -1,5 +1,6 @@
 var homepage = angular.module('homepage', [
 	'ngRoute',
+	'feedbacksControllers',
 	'postsControllers',
 	'projectsControllers'
 ]);
@@ -7,6 +8,10 @@ var homepage = angular.module('homepage', [
 homepage.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
 		$routeProvider.
+			when('/feedbacks/new', {
+				templateUrl: '../assets/feedbackNew.html',
+				controller: 'FeedbackCreateCtrl'
+			}).
 			when('/posts/new', {
 				templateUrl: '../assets/postNew.html',
 				controller: 'PostCreateCtrl'
