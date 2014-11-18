@@ -18,3 +18,4 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'spring',        group: :development
 
+gem 'rails_12factor', group: :production
