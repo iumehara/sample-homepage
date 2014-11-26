@@ -10,11 +10,11 @@ homepage.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
 		$routeProvider.
 			when('/cv', {
-				templateUrl: '../assets/cvIndex.html',
+				templateUrl: "<%= asset_path 'cvIndex.html' %>",
 				controller: 'CvIndexCtrl'
 			}).
 			otherwise({
-				templateUrl: '../assets/default.html'
+				templateUrl: "<%= asset_path 'default.html' %>"
 			});
 		// $locationProvider.html5Mode(true);
 	}

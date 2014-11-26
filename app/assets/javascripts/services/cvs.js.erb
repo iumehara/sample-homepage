@@ -6,29 +6,29 @@ cvServices.factory('cvData', ['$http',
 			data: {
 				cvs: {
 					icons: [
-						'/assets/icon-ruby.png',
-						'/assets/icon-ror.png',
-						'/assets/icon-js.png',
-						'/assets/icon-angular.png',
-						'/assets/icon-json.png',
-						'/assets/icon-jquery.png',
-						'/assets/icon-pg.png',
-						'/assets/icon-memcached.png',
-						'/assets/icon-redis.png',
-						'/assets/icon-git.png',
-						'/assets/icon-github.png',
-						'/assets/icon-heroku.png',
-						'/assets/icon-fb.png',
-						'/assets/icon-aws.png',
-						'/assets/icon-bootstrap.png',
-						'/assets/icon-zurb.png'
+						"<%= asset_path 'icon-ruby.png' %>",
+						"<%= asset_path 'icon-ror.png' %>",
+						"<%= asset_path 'icon-js.png' %>",
+						"<%= asset_path 'icon-angular.png' %>",
+						"<%= asset_path 'icon-json.png' %>",
+						"<%= asset_path 'icon-jquery.png' %>",
+						"<%= asset_path 'icon-pg.png' %>",
+						"<%= asset_path 'icon-memcached.png' %>",
+						"<%= asset_path 'icon-redis.png' %>",
+						"<%= asset_path 'icon-git.png' %>",
+						"<%= asset_path 'icon-github.png' %>",
+						"<%= asset_path 'icon-heroku.png' %>",
+						"<%= asset_path 'icon-fb.png' %>",
+						"<%= asset_path 'icon-aws.png' %>",
+						"<%= asset_path 'icon-bootstrap.png' %>",
+						"<%= asset_path 'icon-zurb.png' %>"
 					],
 					experience: [
 						{
 							title: "Developer (2013 ~ current)",
 							name: "It's On Me",
 							url: 'http://itson.me',
-							screenshot: '/assets/screenshot-itsonme.png',
+							screenshot: "<%= asset_path 'screenshot-itsonme.png' %>",
 							contents: {
 								intro: "It's On Me is a web gifting platform that allows users to send restaurant gifts to their friends from their mobile or web browsers.",
 								bullets: [
@@ -87,7 +87,7 @@ cvServices.factory('cvData', ['$http',
 							title: 'Founder/Developer (2012-current)',
 							name: 'daidake.com',
 							url: 'http://daidake.com',
-							screenshot: '/assets/screenshot-daidake.png',
+							screenshot: "<%= asset_path 'screenshot-daidake.png' %>",
 							contents: {
 								intro: "Daidake, which means 'title only' in Japanese, is a link submission/ranking site with functionality similar to Reddit and Hacker News, where users submit links to English language articles, with short Japanese summaries. Technical features include:",
 								bullets: [
@@ -135,7 +135,7 @@ cvServices.factory('cvData', ['$http',
 							title: 'Co-Founder/Developer (2014 ~ current)',
 							name: 'shokuget.com',
 							url: 'http://shokuget.com',
-							screenshot: '/assets/screenshot-shokuget.png',
+							screenshot: "<%= asset_path 'screenshot-shokuget.png' %>",
 							contents: {
 								intro: "Shokuget, which means 'Occupation-getter' in Japanese, is a job listing site for Japanese speaking employees and employers in New York.",
 								bullets: [
@@ -183,7 +183,7 @@ cvServices.factory('cvData', ['$http',
 							title: 'Stategy Consultant (Non-technical) (2010 ~ 2012)',
 							name: 'Simon-Kucher & Partners',
 							url: 'http://simon-kucher.com',
-							screenshot: '/assets/screenshot-skp.png',
+							screenshot: "<%= asset_path 'screenshot-skp.png' %>",
 							contents: {
 								intro: "Simon-Kucher & Partners is a marketing strategy consulting firm with a focus on pricing and market entry. Managed projects related to new product pricing and market-entry strategy based on user data analysis and interviews."
 							}
@@ -193,12 +193,12 @@ cvServices.factory('cvData', ['$http',
 						{
 							degree: 'MBA (2010)',
 							school: "Columbia Business School",
-							logo: '/assets/logo-cbs.png'
+							logo: "<%= asset_path 'logo-cbs.png' %>"
 						},
 						{
 							degree: "BA, Economics (2002)",
 							school: "University of Virginia",
-							logo: '/assets/logo-uva.png'
+							logo: "<%= asset_path 'logo-uva.png' %>"
 						}
 					]
 				}
