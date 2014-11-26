@@ -32,8 +32,8 @@ cvServices.factory('cvData', ['$http',
 							contents: {
 								intro: "It's On Me is a web gifting platform that allows users to send restaurant gifts to their friends from their mobile or web browsers.",
 								bullets: [
-									"Actively involved in the development and maintenance of a Ruby on Rails API that talks to multilpe clients includes iOS and Android mobile apps, and an AngularJS web client.",
-									"Also created multilpe internal administrative apps/features."
+									"Actively involved in the development and maintenance of a Ruby on Rails JSON API that talks to multilpe clients includes iOS and Android mobile apps, and an AngularJS web client.",
+									"Created multilpe internal administrative apps/features that analyze and sort through hundreds of thousands of data entries."
 								]
 							},
 							languages: [
@@ -84,54 +84,6 @@ cvServices.factory('cvData', ['$http',
 							]
 						},
 						{
-							title: 'Founder/Developer (2012-current)',
-							name: 'daidake.com',
-							url: 'http://daidake.com',
-							screenshot: "<%= asset_path 'screenshot-daidake.png' %>",
-							contents: {
-								intro: "Daidake, which means 'title only' in Japanese, is a link submission/ranking site with functionality similar to Reddit and Hacker News, where users submit links to English language articles, with short Japanese summaries. Technical features include:",
-								bullets: [
-									"ActiveRecord link-ranking and sorting based on link score and recency",
-									"User score and badge system based on link and comment popularity",
-									"Omniauth Facebook/Twitter login system"
-								]
-							},
-						 	languages: [
-								{
-									name: "Ruby",
-									type: "ruby"
-								},
-								{
-									name: "JavaScript",
-									type: "js"
-								},
-								{
-									name: "SQL (Postgres)",
-									type: "pg"
-								}
-						 	],
-						 	frameworks: [
-								{
-									name: "Ruby on Rails",
-									type: "ruby"
-								},
-								{
-									name: "jQuery",
-									type: "js"
-								},
-						 	],
-						 	services: [
-								{
-									name: "GitHub",
-									type: "other"
-								},
-								{
-									name: "Heroku",
-									type: "other"
-								}
-						 	]
-						},
-						{
 							title: 'Co-Founder/Developer (2014 ~ current)',
 							name: 'shokuget.com',
 							url: 'http://shokuget.com',
@@ -180,6 +132,54 @@ cvServices.factory('cvData', ['$http',
 						 	]
 						},
 						{
+							title: 'Founder/Developer (2012-current)',
+							name: 'daidake.com',
+							url: 'http://daidake.com',
+							screenshot: "<%= asset_path 'screenshot-daidake.png' %>",
+							contents: {
+								intro: "Daidake, which means 'title only' in Japanese, is a link submission/ranking site that I created, that has functionality similar to Reddit and Hacker News, where users submit links to English language articles, with short Japanese summaries. Technical features include:",
+								bullets: [
+									"ActiveRecord link-ranking and sorting based on link score and recency",
+									"User score and badge system based on link and comment popularity",
+									"Omniauth Facebook/Twitter login system"
+								]
+							},
+						 	languages: [
+								{
+									name: "Ruby",
+									type: "ruby"
+								},
+								{
+									name: "JavaScript",
+									type: "js"
+								},
+								{
+									name: "SQL (Postgres)",
+									type: "pg"
+								}
+						 	],
+						 	frameworks: [
+								{
+									name: "Ruby on Rails",
+									type: "ruby"
+								},
+								{
+									name: "jQuery",
+									type: "js"
+								},
+						 	],
+						 	services: [
+								{
+									name: "GitHub",
+									type: "other"
+								},
+								{
+									name: "Heroku",
+									type: "other"
+								}
+						 	]
+						},
+						{
 							title: 'Stategy Consultant (Non-technical) (2010 ~ 2012)',
 							name: 'Simon-Kucher & Partners',
 							url: 'http://simon-kucher.com',
@@ -193,12 +193,14 @@ cvServices.factory('cvData', ['$http',
 						{
 							degree: 'MBA (2010)',
 							school: "Columbia Business School",
-							logo: "<%= asset_path 'logo-cbs.png' %>"
+							logo: "<%= asset_path 'logo-cbs.png' %>",
+							details: "Focused on Entrepreneurship, Marketing and Finance. Held non-technical strategy internships at two startups (KartMe.com and Microhealth.org)."
 						},
 						{
 							degree: "BA, Economics (2002)",
 							school: "University of Virginia",
-							logo: "<%= asset_path 'logo-uva.png' %>"
+							logo: "<%= asset_path 'logo-uva.png' %>",
+							details: "Yeah, this was a while ago, so I can't say I remember a whole lot here."
 						}
 					]
 				}

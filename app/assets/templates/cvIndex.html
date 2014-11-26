@@ -12,7 +12,7 @@
           </span>
         </div>
         <div>
-          I'm a full-stack Ruby on Rails developer. I am comfortable with both SQL (Postgres/ActiveRecord) and NOSQL (Firebase/JSON APIs) databases, that has recently been working on improving his JavaScript game with AngularJS and native JavaScript applications.
+          I'm a full-stack Ruby on Rails developer.  On the front-end, I have developed standard static-page Rails apps, as well as single-page apps using AngularJS and native Javascript.  On the back-end I have worked with both SQL (Postgres/ActiveRecord) and NOSQL (JSON APIs/Firebase) databases.
         </div>
       </div>
     </div>
@@ -84,21 +84,36 @@
           <div class="col-sm-12 group-box">
             <div>{{education.degree}}</div>
             <img src="{{education.logo}}">
+            <div>{{education.details}}</div>
           </div>
         </div>
       </div>
     </div>
 
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-md-10 col-md-offset-1">
+      <div class="col-sm-12 col-md-10 col-md-offset-1 about">
         <h2>About this page</h2>
         <div>
-          <div>This page is an AngularJS app with data hosted on Firebase.</div>
-          <div>Source code for this page is avaiable at my GitHub account.</div>
+          <div>
+            This page is an AngularJS on Rails app hosted on Heroku. I'm currently hosting static JSON data in the asset pipeline, but plan to move it out to a Firebase database. Source code for this page is available at my
+            <a href="https://www.github.com/iumehara/umeharaio">GitHub account</a>.
+          </div>
         </div>
       </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <div class="row signature">
+      <div>2014 ichizo umehara</div>
+    </div>
   </div>
-</div>
+</footer>
+
 
 <div ng-include="feedbackForm.url"></div>

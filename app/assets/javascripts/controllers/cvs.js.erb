@@ -5,19 +5,16 @@ cvsControllers.controller('CvIndexCtrl', ['$scope', '$location', '$http', 'cvDat
 		$scope.data = cvData.data;
 
 		$scope.navbarPartial = {
-			url: '../assets/_navbar.html'
+			url: "<%= asset_path '_navbar.html' %>"
 		};
 
 		$scope.feedbackForm = {
-			url: '../assets/_feedbackForm.html'
+			url: "<%= asset_path '_feedbackForm.html' %>"
 		};
 
 		$scope.navHome = function() {
 			$location.url('/')
 		}
-
-
-
 	}
 ]);
 

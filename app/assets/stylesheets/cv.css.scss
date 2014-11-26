@@ -1,7 +1,15 @@
+.mainview {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 20px;
+}
+
 #cv {
 	margin-top: -20px;
 	h1 {
 		text-align: center;
+	}
+	h4 {
+		font-size: 25px;
 	}
 	.intro {
 		padding: 50px;
@@ -61,5 +69,19 @@
 				}
 			}
 		}
+	}
+}
+
+.footer {
+	text-align: center;
+	padding: 20px;
+	background-color: black;
+	color: #F5F5F5;
+	a {
+		color: #F5F5F5;
+	}
+	a:hover {
+		color: white;
+		text-decoration: underline;
 	}
 }
