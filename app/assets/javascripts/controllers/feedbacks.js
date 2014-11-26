@@ -1,4 +1,4 @@
-var feedbacksControllers = angular.module('feedbacksControllers', ['feedbackServices']);
+var feedbacksControllers = angular.module('feedbacksControllers', []);
 
 feedbacksControllers.controller('FeedbackCreateCtrl', ['$scope', '$location', 'feedbackData',
 	function($scope, $location) {

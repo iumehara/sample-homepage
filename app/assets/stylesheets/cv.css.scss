@@ -1,0 +1,52 @@
+#cv {
+	background-color: white;
+	h1 {
+		text-align: center;
+	}
+	.label.ruby {
+		background-color: #9c1524;
+	}
+	.label.js {
+		background-color: #F0DB4F;
+		color: black;
+	}
+	.label.pg {
+		background-color: #306094;
+	}
+	.language {
+		margin: 5px;
+		float: left;
+	}
+	.title {
+		margin: 0;
+	}
+	.description {
+		margin: 0;
+		.row {
+			margin: 0;
+		}
+		.content {
+			margin: 0;
+			padding: 10px;
+		}
+	}
+	.experiences {
+		margin: 50px 0;
+		.services {
+			margin-bottom: 50px;
+		}
+		.tags-section {
+			margin: 0;
+			padding: 0;
+			.title {
+				display: inline-block;
+				padding: 4px;
+				font-weight: bold;
+				vertical-align: top;
+			}
+			.tags {
+				display: inline-block;
+			}
+		}
+	}
+}

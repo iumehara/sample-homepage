@@ -1,4 +1,4 @@
-var postsControllers = angular.module('postsControllers', ['postServices']);
+var postsControllers = angular.module('postsControllers', []);
 
 postsControllers.controller('PostIndexCtrl', ['$scope', '$location', '$http', 'postData',
 	function($scope, $location, $http) {

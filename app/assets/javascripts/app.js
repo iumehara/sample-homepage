@@ -1,13 +1,22 @@
 var homepage = angular.module('homepage', [
 	'ngRoute',
+	'cvsControllers',
 	'feedbacksControllers',
 	'postsControllers',
-	'projectsControllers'
+	'projectsControllers',
+	'cvServices',
+	'feedbackServices',
+	'postServices',
+	'projectServices'
 ]);
 
 homepage.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
 		$routeProvider.
+			when('/cvs', {
+				templateUrl: '../assets/cvIndex.html',
+				controller: 'CvIndexCtrl'
+			}).
 			when('/feedbacks/new', {
 				templateUrl: '../assets/feedbackNew.html',
 				controller: 'FeedbackCreateCtrl'

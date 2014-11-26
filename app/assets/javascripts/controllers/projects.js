@@ -1,4 +1,4 @@
-var projectsControllers = angular.module('projectsControllers', ['projectServices']);
+var projectsControllers = angular.module('projectsControllers', []);
 
 projectsControllers.controller('ProjectIndexCtrl', ['$scope', '$location', '$http', 'projectData',
 	function($scope, $location, $http) {

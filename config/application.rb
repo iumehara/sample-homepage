@@ -27,5 +27,20 @@ module Homepage
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.paths << Rails.root.join('templates')
+
+
+    config.action_mailer.default_url_options = { host: "umehara.io" }
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+        address: "smtp.gmail.com",
+        port: 587,
+        domain: "umehara.io",
+        user_name: "ichizo@umehara.io",
+        password: "mentaiPasta",
+        authentication: "plain",
+        enable_starttls_auto: true
+    }
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.raise_delivery_errors = true
   end
 end
