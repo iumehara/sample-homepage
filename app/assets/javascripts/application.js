@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require underscore-min
-//= require bootstrap
+//= require bootstrap-sprockets
 //= require angular
 //= require angular-route
 //= require app

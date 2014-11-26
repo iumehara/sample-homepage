@@ -1,17 +1,10 @@
 #cv {
-	background-color: white;
+	margin-top: -20px;
 	h1 {
 		text-align: center;
 	}
-	.label.ruby {
-		background-color: #9c1524;
-	}
-	.label.js {
-		background-color: #F0DB4F;
-		color: black;
-	}
-	.label.pg {
-		background-color: #306094;
+	.intro {
+		padding: 50px;
 	}
 	.language {
 		margin: 5px;
@@ -30,8 +23,15 @@
 			padding: 10px;
 		}
 	}
+	.group-box {
+		margin-bottom: 20px;
+		padding: 50px;
+		background-color: #F5F5F5;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
 	.experiences {
-		margin: 50px 0;
 		.services {
 			margin-bottom: 50px;
 		}
@@ -46,6 +46,19 @@
 			}
 			.tags {
 				display: inline-block;
+				.label.ruby {
+					background-color: #9c1524;
+				}
+				.label.js {
+					background-color: #F0DB4F;
+					color: black;
+				}
+				.label.pg {
+					background-color: #306094;
+				}
+				.label.other {
+					background-color: black;
+				}
 			}
 		}
 	}

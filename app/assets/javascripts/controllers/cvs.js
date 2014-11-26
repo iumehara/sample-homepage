@@ -8,6 +8,16 @@ cvsControllers.controller('CvIndexCtrl', ['$scope', '$location', '$http', 'cvDat
 			url: '../assets/_navbar.html'
 		};
 
+		$scope.feedbackForm = {
+			url: '../assets/_feedbackForm.html'
+		};
+
+		$scope.navHome = function() {
+			$location.url('/')
+		}
+
+
+
 	}
 ]);
 

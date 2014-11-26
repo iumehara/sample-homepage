@@ -1,100 +1,104 @@
+<div ng-include="navbarPartial.url"></div>
+
 <div id="cv">
-  <div ng-include="navbarPartial.url"></div>
-
-  <div class="container" style="margin-top: 40px">
-    <h1>ichizo umehara</h1>
-    <div style="text-align:center;">
-      <a href="#" data-toggle="modal" data-target="#myModal">Contact</a> |
-      <a href="https://github.com/iumehara" target="_blank">GitHub</a>
-    </div>
-    <div style="text-align:center;">Full-stack Ruby on Rails Developer, New York</div>
-    <div style="text-align: center;">
-      <span ng-repeat="icon in data.cvs.icons">
-        <img src="{{icon}}" style="height:50px;"></a>
-      </span>
-
-    </div>
-    <div>I'm a full-stack Ruby on Rails developer. I am comfortable with both SQL (Postgres/ActiveRecord) and NOSQL (Firebase/JSON APIs) databases, that has recently been working on improving his JavaScript game with AngularJS and native JavaScript applications.</div>
-
-
-
-    <div class="row experiences">
-  		<h2>Experience</h2>
-      <div>I have three years of full-time Ruby on Rails development experience.</div>
-  		<div ng-repeat="experience in data.cvs.experience">
-
-        <div class="title row span12">
-            <div>{{experience.title}}</div>
-            <h4>
-              <a href="{{experience.url}}" target="_blank">{{experience.name}}</a>
-            </h4>
+  <div class="container-fluid">
+    <div class="row intro">
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <h1>ichizo umehara</h1>
+        <div style="text-align:center;">Full-stack Ruby on Rails Developer, New York</div>
+        <div style="text-align: center;">
+          <span ng-repeat="icon in data.cvs.icons">
+            <img src="{{icon}}" style="height:50px;">
+          </span>
         </div>
-        <div class="description row span12">
-          <div class="row span3">
-            <div>
-              <img src="{{experience.screenshot}}"></a>
+        <div>
+          I'm a full-stack Ruby on Rails developer. I am comfortable with both SQL (Postgres/ActiveRecord) and NOSQL (Firebase/JSON APIs) databases, that has recently been working on improving his JavaScript game with AngularJS and native JavaScript applications.
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-10 col-md-offset-1 experiences">
+        <h2>Experience</h2>
+        <div ng-repeat="experience in data.cvs.experience" class="row">
+          <div class="col-sm-12 group-box">
+            <div class="row">
+              <div class="title">
+                  <div>{{experience.title}}</div>
+                  <h4>
+                    <a href="{{experience.url}}" target="_blank">{{experience.name}}</a>
+                  </h4>
+              </div>
+            </div>
+
+            <div class="row description">
+              <div class="col-sm-12 col-md-5 col-lg-3">
+                <img src="{{experience.screenshot}}" style="width:100%;">
+              </div>
+              <div class="content col-sm-12 col-md-7 col-sm-9">
+          			<div>{{experience.contents.intro}}</div>
+                <ul>
+                  <li ng-repeat="point in experience.contents.bullets">
+                    {{point}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div ng-hide="{{experience.languages == null}}" class="row tags-section">
+              <span class="title">Languages</span>
+              <span class="tags">
+                <span ng-repeat="language in experience.languages">
+                  <div class="label {{language.type}}">{{language.name}}</div>
+                </span>
+              </span>
+            </div>
+
+            <div ng-hide="{{experience.frameworks == null}}" class="row tags-section">
+              <span class="title">Frameworks</span>
+              <span class="tags">
+                <span ng-repeat="framework in experience.frameworks">
+                  <div class="label {{framework.type}}">{{framework.name}}</div>
+                </span>
+              </span>
+            </div>
+
+            <div ng-hide="{{experience.services == null}}" class="row tags-section">
+              <span class="title">Services</span>
+              <span class="tags">
+                <span ng-repeat="service in experience.services">
+                  <div class="label {{service.type}}">{{service.name}}</div>
+                </span>
+              </span>
             </div>
           </div>
-          <div class="content row span9">
-      			<div>{{experience.contents.intro}}</div>
-            <ul>
-              <li ng-repeat="point in experience.contents.bullets">
-                {{point}}
-              </li>
-            </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <h2>Education</h2>
+        <div ng-repeat="education in data.cvs.education" class="row">
+
+          <div class="col-sm-12 group-box">
+            <div>{{education.degree}}</div>
+            <img src="{{education.logo}}">
           </div>
         </div>
-
-        <div ng-hide="{{experience.services == null}}" class="tags-section span12">
-          <span class="title">
-            Languages
-          </span>
-          <span class="tags">
-            <span ng-repeat="language in experience.languages">
-              <div class="language label {{language.type}}">{{language.name}}</div>
-            </span>
-          </span>
-        </div>
-
-        <div ng-hide="{{experience.services == null}}" class="tags-section span12">
-          <span class="title">
-            Frameworks
-          </span>
-          <span class="tags">
-            <span ng-repeat="framework in experience.frameworks">
-              <div class="framework label {{framework.type}}">{{framework.name}}</div>
-            </span>
-          </span>
-        </div>
-
-        <div ng-hide="{{experience.services == null}}" class="services tags-section span12" style="margin-bottom: 100px;">
-          <span class="title">
-            Services
-          </span>
-          <span class="tags">
-            <span ng-repeat="service in experience.services">
-              <div class="service label {{service.type}}">{{service.name}}</div>
-            </span>
-          </span>
-        </div>
-      </div>
-    </div>
-    <div>
-      <h2>Education</h2>
-      <div ng-repeat="education in data.cvs.education">
-        <div>{{education.degree}}</div>
-        <img src="{{education.logo}}" style="height: 30px;">
-      </div>
-    </div>
-    <div>
-      <h2>About this page</h2>
-      <div>
-        <div>This page is an AngularJS app with data hosted on Firebase.</div>
-        <div>Source code for this page is avaiable at my GitHub account.</div>
       </div>
     </div>
 
-
+    <div class="row">
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <h2>About this page</h2>
+        <div>
+          <div>This page is an AngularJS app with data hosted on Firebase.</div>
+          <div>Source code for this page is avaiable at my GitHub account.</div>
+        </div>
+      </div>
+    </div>
   </div>
-
 </div>
+
+<div ng-include="feedbackForm.url"></div>
