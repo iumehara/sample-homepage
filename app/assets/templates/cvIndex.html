@@ -29,9 +29,12 @@
             <div class="row">
               <div class="title">
                   <div>{{experience.title}}</div>
-                  <h4>
-                    <a href="{{experience.url}}" target="_blank">{{experience.name}}</a>
-                  </h4>
+                  <div class="name">
+                    <h4>
+                      <a href="{{experience.url}}" target="_blank">{{experience.name}}</a>
+                    </h4>
+                    <a ng-hide="{{!experience.github}}" href="{{experience.github}}" target="_blank" class="btn btn-default">Git Hub</a>
+                  </div>
               </div>
             </div>
 

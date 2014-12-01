@@ -20,6 +20,15 @@
 	}
 	.title {
 		margin: 0;
+		.name {
+			h4 {
+				display: inline-block;
+			}
+			a {
+				margin: -5px 0 0 10px;
+				display: inline-block;
+			}
+		}
 	}
 	.description {
 		margin: 0;
