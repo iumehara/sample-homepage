@@ -6,22 +6,22 @@ cvServices.factory('cvData', ['$http',
 			data: {
 				cvs: {
 					icons: [
-						"<%= asset_path 'icon-ruby.png' %>",
-						"<%= asset_path 'icon-ror.png' %>",
-						"<%= asset_path 'icon-js.png' %>",
-						"<%= asset_path 'icon-angular.png' %>",
-						"<%= asset_path 'icon-json.png' %>",
-						"<%= asset_path 'icon-jquery.png' %>",
-						"<%= asset_path 'icon-pg.png' %>",
-						"<%= asset_path 'icon-memcached.png' %>",
-						"<%= asset_path 'icon-redis.png' %>",
-						"<%= asset_path 'icon-git.png' %>",
-						"<%= asset_path 'icon-github.png' %>",
-						"<%= asset_path 'icon-heroku.png' %>",
-						"<%= asset_path 'icon-fb.png' %>",
-						"<%= asset_path 'icon-aws.png' %>",
-						"<%= asset_path 'icon-bootstrap.png' %>",
-						"<%= asset_path 'icon-zurb.png' %>"
+						{ url: "<%= asset_path 'icon-ruby.png' %>", desc: "Ruby" },
+						{ url: "<%= asset_path 'icon-ror.png' %>", desc: "Ruby on Rails" },
+						{ url: "<%= asset_path 'icon-js.png' %>", desc: "JavaScript" },
+						{ url: "<%= asset_path 'icon-angular.png' %>", desc: "Angular JS" },
+						{ url: "<%= asset_path 'icon-json.png' %>", desc: "JSON" },
+						{ url: "<%= asset_path 'icon-jquery.png' %>", desc: "jQuery" },
+						{ url: "<%= asset_path 'icon-pg.png' %>", desc: "PostgreSQL" },
+						{ url: "<%= asset_path 'icon-memcached.png' %>", desc: "Memcached" },
+						{ url: "<%= asset_path 'icon-redis.png' %>", desc: "Redis" },
+						{ url: "<%= asset_path 'icon-git.png' %>", desc: "Git" },
+						{ url: "<%= asset_path 'icon-github.png' %>", desc: "Git Hub" },
+						{ url: "<%= asset_path 'icon-heroku.png' %>", desc: "Heroku" },
+						{ url: "<%= asset_path 'icon-fb.png' %>", desc: "Firebase" },
+						{ url: "<%= asset_path 'icon-aws.png' %>", desc: "AWS" },
+						{ url: "<%= asset_path 'icon-bootstrap.png' %>", desc: "Twitter Bootstrap" },
+						{ url: "<%= asset_path 'icon-zurb.png' %>", desc: "Zurb Foundation" }
 					],
 					experience: [
 						{
@@ -200,7 +200,7 @@ cvServices.factory('cvData', ['$http',
 							degree: "BA, Economics (2002)",
 							school: "University of Virginia",
 							logo: "<%= asset_path 'logo-uva.png' %>",
-							details: "Yeah, this was a while ago, so I can't say I remember a whole lot here."
+							details: "Focused on Micro Economics and Business"
 						}
 					]
 				}

@@ -6,7 +6,7 @@
         <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
       </div>
       <div class="modal-body">
-			  <form role="form">
+			  <form role="form" ng-if="feedbackParams.submitted == false">
 			    <div class="form-group">
 			      <label class="col-sm-6"><strong>Your Name</strong>
               <input class="form-control" ng-model="feedbackParams.feedbackName" placeholder="What's your name?" type="text" maxlength="250">
@@ -22,9 +22,12 @@
             </label>
 			    </div>
 			  </form>
+        <div ng-if="feedbackParams.submitted == true">
+          <p>The message has been sent to umehara.io. Thank you for your feedback.</p>
+        </div>
       </div>
       <div class="clearfix"></div>
-      <div class="modal-footer">
+      <div class="modal-footer" ng-if="feedbackParams.submitted == false">
         <button class="btn btn-primary" ng-click="createFeedback()">Create</button>
         <button class="btn btn-danger pull-right" ng-click="clearFeedback()">Clear post</button>
       </div>

@@ -9,6 +9,7 @@ feedbacksControllers.controller('FeedbackCreateCtrl', ['$scope', '$location', 'f
 		$scope.data = feedbackData.data;
 
 		$scope.feedbackParams = {
+			submitted: false,
 			feedbackSubject: '',
 			feedbackName: '',
 			feedbackEmail: '',
@@ -17,6 +18,7 @@ feedbacksControllers.controller('FeedbackCreateCtrl', ['$scope', '$location', 'f
 
 		$scope.createFeedback = function() {
 			feedbackData.createFeedback($scope.feedbackParams);
+			$scope.feedbackParams.submitted = true;
 		}
 
 		$scope.clearFeedback = function() {
