@@ -19,10 +19,7 @@
 //= require app
 //= require controllers/cvs
 //= require controllers/feedbacks
-//= require controllers/posts
-//= require controllers/projects
 //= require services/cvs
 //= require services/feedbacks
-//= require services/posts
-//= require services/projects
-//= require templates/cvIndex.jst
+//= require templates/cvIndex
+//= require templates/default

@@ -14,7 +14,7 @@ homepage.config(['$routeProvider', '$locationProvider',
 				controller: 'CvIndexCtrl'
 			}).
 			otherwise({
-				templateUrl: "<%= asset_path 'default.html' %>"
+				template: JST["templates/default"]
 			});
 		// $locationProvider.html5Mode(true);
 	}
