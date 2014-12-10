@@ -10,7 +10,7 @@ homepage.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
 		$routeProvider.
 			when('/cv', {
-				templateUrl: "<%= asset_path 'cvIndex.html' %>",
+				template: JST["templates/cvIndex"],
 				controller: 'CvIndexCtrl'
 			}).
 			otherwise({

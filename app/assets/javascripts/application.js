@@ -25,3 +25,4 @@
 //= require services/feedbacks
 //= require services/posts
 //= require services/projects
+//= require templates/cvIndex.jst
