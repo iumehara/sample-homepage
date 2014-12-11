@@ -21,3 +21,14 @@ gem 'newrelic_rpm'
 gem 'spring',        group: :development
 
 gem 'rails_12factor', group: :production
+
+group :test do
+	gem 'capybara'
+	gem 'launchy'
+	gem 'selenium-webdriver'
+end
+
+group :development, :test do
+	gem "rspec-rails", "~> 3.0"
+	gem "jasmine", github: "pivotal/jasmine-gem"
+end

@@ -16,6 +16,7 @@
 //= require bootstrap-sprockets
 //= require angular
 //= require angular-route
+//= require angular-mocks
 //= require app
 //= require controllers/cvs
 //= require controllers/feedbacks

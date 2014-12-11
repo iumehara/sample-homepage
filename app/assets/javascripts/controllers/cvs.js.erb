@@ -1,7 +1,7 @@
 var cvsControllers = angular.module('cvsControllers', []);
 
-cvsControllers.controller('CvIndexCtrl', ['$scope', '$location', '$http', 'cvData',
-	function($scope, $location, $http) {
+cvsControllers.controller('CvIndexCtrl', ['$scope', '$location', 'cvData',
+	function($scope, $location) {
 
 		$scope.data = cvData.data;
 

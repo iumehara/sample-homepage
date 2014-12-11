@@ -9,9 +9,9 @@
         <div style="text-align:center;">Full-stack Ruby on Rails Developer, New York</div>
         <div style="text-align: center;">
           <span ng-repeat="icon in data.cvs.icons">
-            <img src="{{icon.url}}" style="height:50px;" class="hello" data-toggle="tooltip" data-placement="bottom" title="{{icon.desc}}">
+            <img src="{{icon.url}}" style="height:50px;" class="service-icons" data-toggle="tooltip" data-placement="bottom" title="{{icon.desc}}">
             <script type="text/javascript">
-              $('.hello').tooltip();
+              $('.service-icons').tooltip();
             </script>
           </span>
         </div>
@@ -41,7 +41,7 @@
 
             <div class="row description">
               <div class="col-sm-12 col-md-5 col-lg-3">
-                <img src="{{experience.screenshot}}" style="width:100%;">
+                <img src="{{experience.screenshot}}" class="screenshot" style="width:100%;">
               </div>
               <div class="content col-sm-12 col-md-7 col-sm-9">
           			<div>{{experience.contents.intro}}</div>
