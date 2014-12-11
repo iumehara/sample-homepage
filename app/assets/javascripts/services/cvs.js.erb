@@ -9,7 +9,7 @@ cvServices.factory('cvData', ['$http',
 		}
 
 		cvData.loadData = function() {
-			$http.get('../assets/data.json').
+			$http.get('../assets/data-ae64ef630ce732689d83f66d827a6beb.json').
 				success(function(data) {
 					cvData.data.cvs = data;
 					console.log("Successfully loaded posts");
